@@ -1,4 +1,3 @@
-#Nombre, apellido, correo y edad.
 
 usuarios =[]
 continuar = True
@@ -11,18 +10,18 @@ print("---"*30)
 
 
 while continuar:
-    nombre = input("Ingresa por favor el nombre")
+    nombre = input("Ingresa por favor el nombre:  ")
 
-    apellido = input("Ingrese por favor el apellido: ")
+    apellido = input("Ingrese por favor el apellido:  ")
 
-    correo= input("ingrese por favor el correo: ")
+    correo= input("ingrese por favor el correo:  ")
     
 
-    edad = input("ingrese la edad: ")
+    edad = int(input("ingrese la edad:  "))
 
     usuarios.append([nombre,apellido,edad,correo])
 
-    valor = input("deseas seguir creando usuarios: (si/no)")
+    valor = input("deseas seguir creando usuarios: (si/no) \n ")
     if (valor == "no"):
         continuar = False
 
@@ -36,16 +35,18 @@ while continuar2:
     "4) Eliminar usuario \n ")) 
 
     if opcion==3:
-        nombre = input("Ingresa por favor el nombre")
+        nombre = input("Ingresa por favor el nombre: ")
 
-        apellido = input("Ingrese por favor el apellido: ")
+        apellido = input("Ingrese por favor el apellido:  ")
 
-        correo= input("ingrese por favor el correo: ")
+        correo= input("ingrese por favor el correo:  ")
     
 
-        edad = input("ingrese la edad: ")
+        edad = int(input("ingrese la edad:  "))
 
         usuarios.append([nombre,apellido,edad,correo])
+        print("---"*30)
+        print("---"*30)
 
         devolver = int(input("1) para volver al menu principal \n2) para terminar "))
 
@@ -57,7 +58,7 @@ while continuar2:
         for cont in usuarios:
             print ("(",contador,")",cont[0], cont[1], cont[2], cont[3])
             contador = contador + 1
-
+        print("---"*30)
         devolver = int(input("1) para volver al menu principal \n 2) para terminar "))
         
         if devolver == 2:
@@ -69,24 +70,24 @@ while continuar2:
             print ("(",contador,")",cont[0], cont[1], cont[2], cont[3])
             contador = contador + 1
         
-        editar = int(input("que usuario desea editar? , indiquelo con los numeros del indice que aparece al principio \n" \
-        "del usuario"))
+        editar = int(input("que usuario desea editar?, indiquelo con los numeros del indice que aparece al principio \n" \
+        "del usuario \n "))
         print("")
         print(usuarios[editar])
         print("")
         editar_pos = int(input("indique que posicion de la lista desea editar, teniendo en cuenta que \n" \
-        "nombre = 0 \n" \
-        "apellido = 1 \n" \
-        "edad = 2 \n" \
-        "correo = 3 \n "))
+        "(0) nombre  \n" \
+        "(1) apellido  \n" \
+        "(2) edad  \n" \
+        "(3) correo  \n "))
         print("")
         print(usuarios[editar][editar_pos])
         print("")
-        del usuarios[editar][editar_pos]
         usuarios[editar][editar_pos] = input(" ingrese por lo que lo quiere reemplazar: ")
         print("asi quedó el usuario: \n \n" \
         , usuarios[editar] )
         print("")
+        print("---"*30)
         devolver = int(input("1) para volver al menu principal \n2) para terminar "))
 
         if devolver == 2:
@@ -107,39 +108,10 @@ while continuar2:
             print ("(",contador,")",cont[0], cont[1], cont[2], cont[3])
             contador = contador + 1
         print("")
+        print("---"*30)
         devolver = int(input("1) para volver al menu principal \n2) para terminar "))
 
         if devolver == 2:
             continuar2 = False
 
         
-    
-
-
-
-   
-
-
-
-        
-
-
-
-    
-    
-
-
-    
-
-   
-        
-
-
-
-
-   
-
-
-
-
-
